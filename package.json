@@ -1,0 +1,21 @@
+{
+  "name": "webgpu-ultrasound-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "基于 CT 体数据与 WebGPU 计算着色器的浏览器超声扫查实训仿真系统",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.60",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.6"
+  }
+}

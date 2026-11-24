@@ -1,0 +1,244 @@
+.workbench-header {
+  align-items: center;
+}
+
+.record-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.record-time {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--fs-lg);
+  font-variant-numeric: tabular-nums;
+  color: var(--slate-800);
+}
+
+.workbench-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 390px) minmax(420px, 1fr) minmax(310px, 350px);
+  gap: var(--sp-4);
+  align-items: stretch;
+  height: calc(100vh - 132px);
+  min-height: 620px;
+}
+
+.body-panel,
+.params-panel,
+.exam-left,
+.exam-right {
+  overflow-y: auto;
+}
+
+.body-canvas-wrap {
+  position: relative;
+  height: 390px;
+  margin-bottom: var(--sp-4);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--slate-800);
+  background:
+    radial-gradient(circle at 50% 28%, rgba(34, 211, 238, 0.12), transparent 18rem),
+    linear-gradient(180deg, #101c30, #07111f 72%);
+}
+
+.body-canvas,
+.replay-body-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.us-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.us-screen {
+  position: relative;
+  flex: 1;
+  min-height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #05070a;
+  border: 1px solid #111827;
+}
+
+.us-canvas,
+.us-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.us-overlay {
+  pointer-events: none;
+}
+
+.us-topbar {
+  position: absolute;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  right: var(--sp-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  pointer-events: none;
+}
+
+.us-brand,
+.us-badges {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.us-brand {
+  color: rgba(226, 232, 240, 0.76);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+}
+
+.us-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 12px #22d3ee;
+}
+
+.us-bottom-hint {
+  position: absolute;
+  left: var(--sp-4);
+  bottom: var(--sp-3);
+  color: rgba(148, 163, 184, 0.72);
+  font-size: var(--fs-xs);
+  pointer-events: none;
+}
+
+.us-error {
+  position: absolute;
+  inset: 64px var(--sp-5) var(--sp-5);
+  display: none;
+  place-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  text-align: center;
+  border: 1px solid rgba(248, 113, 113, 0.32);
+  border-radius: var(--radius-lg);
+  background: rgba(69, 10, 10, 0.86);
+  color: #fee2e2;
+  z-index: 5;
+}
+
+.us-error.is-visible {
+  display: grid;
+}
+
+.us-error p {
+  color: #fecaca;
+}
+
+.us-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3) var(--sp-4);
+  padding-top: var(--sp-3);
+  color: var(--slate-500);
+  font-size: var(--fs-xs);
+}
+
+.us-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.legend-dot.shadow {
+  background: #020617;
+  border: 1px solid var(--slate-700);
+}
+
+.legend-dot.enhance {
+  background: #e0f2fe;
+}
+
+.legend-dot.reverb {
+  background: repeating-linear-gradient(90deg, #67e8f9 0 2px, transparent 2px 5px);
+}
+
+.legend-dot.speckle {
+  background: radial-gradient(circle, #e2e8f0 1px, transparent 1.5px) 0 0 / 6px 6px #334155;
+}
+
+.tgc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-1) var(--sp-3);
+}
+
+.tgc-grid .slider-row {
+  grid-template-columns: 74px 1fr 54px;
+  gap: var(--sp-2);
+}
+
+.tgc-grid .slider-label,
+.tgc-grid .slider-value {
+  font-size: var(--fs-xs);
+}
+
+.imaging-grid {
+  display: grid;
+  grid-template-columns: minmax(520px, 1fr) 360px;
+  gap: var(--sp-4);
+  align-items: start;
+}
+
+.imaging-screen-panel .us-screen {
+  height: calc(100vh - 250px);
+  min-height: 520px;
+  flex: none;
+}
+
+.preset-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--sp-2);
+}
+
+.parameter-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+.mini-card {
+  padding: var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--slate-50);
+  display: grid;
+  gap: 4px;
+}
+
+.mini-card span {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  line-height: 1.45;
+}
